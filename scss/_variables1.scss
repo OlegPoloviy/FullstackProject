@@ -1,0 +1,23 @@
+$header-background: url('../img/m-h-day.jpg');
+$body-color: #FFFF;
+@mixin button{
+  background-color: #699900;
+  color: #FFFF;
+  //padding: 20%;
+  height: 40px;
+  width: 8%;
+  border: 0;
+}
+@mixin url{
+  color: #FFFF;
+
+}
+$font-map:(
+  fresca:'Fresca',
+  hind: 'Hind',
+  sansPro: 'Source Sans Pro'
+);
+$font-color:#2c2f3c;
+$card_bg: #21232e;
+$font_color_card:#FFFF;
+$banner_gradient:linear-gradient(90deg, #4caf50, #2196f3);

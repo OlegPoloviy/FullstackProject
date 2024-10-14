@@ -1,0 +1,23 @@
+$header-background: url('../img/m-h-night.jpg');
+$body-color: #21232E;
+@mixin button{
+  background-color: #e3ac00;
+  color: #FFFF;
+//padding: 20%;
+  height: 40px;
+  width: 8%;
+  border: 0;
+}
+@mixin url{
+  color: #FFFF;
+
+}
+$font-map:(
+        fresca:'Fresca',
+        hind: 'Hind',
+        sansPro: 'Source Sans Pro'
+);
+$font-color:#FFFF;
+$card_bg: #3B3F50;
+$font_color_card:#FFFF;
+$banner_gradient:linear-gradient(90deg, #DCA106, #99374B);
