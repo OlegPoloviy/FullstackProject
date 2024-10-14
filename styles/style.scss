@@ -1,0 +1,404 @@
+// Змінні
+$font-family: "Clicker Script", cursive;
+$primary-color: #603809;
+$secondary-color: #F9C06A;
+$accent-color: #F9A602;
+$background-color: #fff9f1;
+$text-color: #333;
+$button-bg-color: #6b8e23;
+$button-hover-color: #556b2f;
+$menu-bg-color: #f4f4f4;
+$menu-text-color: #333;
+$menu-accent-color: #F9A602;
+$menu-border-radius: 10px;
+
+//*{
+//  overflow-x: hidden;
+//}
+
+// Міксини
+@mixin button-styles {
+  padding: 12px 20px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+* {
+  margin: 0;
+  font-family: $font-family;
+  font-size: 40px;
+  padding: 0;
+}
+
+.head {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../media/coffee_image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: whitesmoke;
+
+  .navbar {
+    width: 100%;
+    position: absolute;
+    top: 0;
+
+    ul {
+      width: 80%;
+      list-style-type: none;
+      display: flex;
+      justify-content: space-around;
+
+      a {
+        text-decoration: none;
+        color: whitesmoke;
+        font-size: 35px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .title {
+    width: 30%;
+    position: relative;
+    top: 20vh;
+    left: 10vw;
+
+    h3 {
+      font-family: Arial;
+      font-size: 40px;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+  }
+
+  .btn {
+    position: relative;
+    top: 30vh;
+    left: 10vw;
+    border: 2px solid orange;
+    border-radius: 10%;
+    background-color: $secondary-color;
+  }
+}
+
+#about {
+  height: 50vh;
+  background-color: $background-color;
+  width: 100%;
+  display: flex;
+  position: relative;
+  //left: 2vw;
+  //padding: 3vh;
+
+  .text_about {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    width: 50%;
+
+    p {
+      font-size: 20px;
+      font-family: Arial;
+    }
+
+    h2 {
+      color: $primary-color;
+    }
+  }
+
+  img {
+    margin: 15px;
+    padding: 5px;
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+  }
+}
+
+#menu {
+  background-color: $background-color;
+
+  h2 {
+    color: $primary-color;
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .menu_container {
+    position: relative;
+    display: flex;
+    height: auto;
+    background-color: $menu-bg-color;
+    padding: 20px;
+    border-radius: $menu-border-radius;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    .menu_sections {
+      position: relative;
+      top: 5vh;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      div {
+        width: 45%;
+        margin-bottom: 20px;
+        padding: 20px;
+        background-color: white;
+        border-radius: $menu-border-radius;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        h2 {
+          font-family: $font-family;
+          font-size: 28px;
+          color: $menu-accent-color;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-family: Arial;
+          font-size: 16px;
+          color: $menu-text-color;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}
+
+#contact {
+  background-color: $background-color;
+  padding: 50px 20px;
+  text-align: center;
+
+  h2 {
+    color: $primary-color;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 20px;
+    margin: 10px 0;
+    color: $text-color;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin: 0 10px;
+
+      a {
+        font-size: 20px;
+        color: $primary-color;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+#reservation {
+  padding: 40px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 50px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    text-align: center;
+    font-family: $font-family;
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .reservation_container {
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      div {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          font-size: 16px;
+          margin-bottom: 5px;
+          color: $text-color;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="time"],
+        select,
+        textarea {
+          padding: 10px;
+          font-size: 14px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          width: 100%;
+          box-sizing: border-box;
+        }
+
+        input[type="checkbox"] {
+          width: auto;
+        }
+
+        textarea {
+          height: 100px;
+          resize: none;
+        }
+
+        input[type="submit"] {
+          @include button-styles;
+          background-color: $button-bg-color;
+
+          &:hover {
+            background-color: $button-hover-color;
+          }
+        }
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        color: #888;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: none;
+        border-color: $button-bg-color;
+      }
+
+      div label[for="callback"] {
+        display: inline-block;
+        margin-left: 10px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+// Мобільні пристрої (до 768px)
+@media (max-width: 768px){
+  .head {
+    .title {
+      padding-top: 10vh;
+      width: 80%;
+      font-size: 25px;
+    }
+
+    .btn {
+      top: 20vh;
+    }
+
+    .navbar ul {
+      flex-direction: column;
+      justify-content: center;
+      li {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  #menu {
+    min-height: auto;
+    padding: 10px 0;
+    height: auto;
+  }
+
+  .menu_container{
+    padding: 0;
+    height: 45vh;
+  }
+
+  .menu_sections {
+    flex-direction: column;
+    min-height: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: auto;
+    top: 0!important;
+  }
+
+
+  #about {
+    flex-direction: column;
+
+    .text_about, img {
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    img {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  #reservation {
+    font-size: 45px;
+    max-width: 100%;
+    margin: 20px;
+    padding: 20px;
+  }
+}
+
+// Планшети (768px - 1024px)
+@media (min-width: 768px) and (max-width: 1024px) {
+  .head {
+    .title {
+      width: 60%;
+      left: 20%;
+      h3, h1 {
+        font-size: 35px;
+      }
+    }
+
+    .btn {
+      top: 25vh;
+    }
+
+    .navbar ul {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+
+  #about {
+    padding: 2vh;
+    img {
+      width: 80%;
+    }
+  }
+}
